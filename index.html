@@ -128,38 +128,127 @@
         <h2 class="section-title">最新日常</h2>
     </section>
 
-    <section class="grid-section" id="community">
-        <div class="card">
-            <i class="fa-brands fa-instagram"></i>
-            <h3>出國ESIM卡</h3>
-            <p>出國必備推薦</p>
-            <a href="https://esimconnect.com.tw/?fbclid=PAZnRzaAQ8j_1leHRuA2FlbQIxMAABp5sA-b5ni8MNREOEZWK-seterQmSJ-6fX3FBJsgaF-_s6NkJH5kmWKxpRWVR_aem_lydtzWOMepOh2pb2sy_Mxw#/access/esimbuy?referencecode=yue" class="btn" target="_blank">出國點我</a>
-        </div>
-         <div class="card">
-            <i class="fa-brands fa-instagram"></i>
-            <h3>個人 Instagram</h3>
-            <p>追蹤玥玥的最新外拍作品、穿搭，<br>以及最真實的日常動態分享。</p>
-            <a href="https://www.instagram.com/0w04linyue?igsh=MWJuMmdsbHpycWtmeQ%3D%3D&utm_source=qr" class="btn" target="_blank">追蹤玥玥</a>
-        </div>
-         <div class="card">
-            <i class="fa-solid fa-martini-glass-citrus"></i>
-            <h3>酒吧 Instagram</h3>
-            <p>Happy Cat Bar 官方帳號，<br>掌握最新的特調菜單與實體活動資訊。</p>
-            <a href="https://www.instagram.com/happy.cat_bar?igsh=MWVoZ2JnMXdzZDY3bQ==" class="btn" target="_blank">查看酒吧</a>
-        </div>
-         <div class="card">
-            <i class="fa-brands fa-instagram"></i>
-            <h3>蝦皮賣場</h3>
-            <p>全台最大庫洛魔法使商品販售。</p>
-            <a href="https://s.shopee.tw/7KskIFajoh" class="btn" target="_blank">商品購買</a>
-        </div>
-        <div class="card">
-            <i class="fa-solid fa-wand-sparkles"></i>
-            <h3>魔卡少女櫻社團</h3>
-            <p>全台最大庫洛魔法使同好交流社群，<br>與我們一起找回童年的純真與感動。</p>
-            <a href="https://www.facebook.com/share/g/18Cbas9Wfc/" class="btn" target="_blank">進入社團</a>
-        </div>
-    </section>
+  <style>
+    /* --- 容器基礎設定 --- */
+    .grid-section {
+        display: grid;
+        /* 電腦版：預設 3 欄，寬度自動適應 */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* --- 卡片基礎樣式 --- */
+    .card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .card i {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+        margin: 10px 0;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+
+    .btn {
+        text-decoration: none;
+        background: #333;
+        color: #fff;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        transition: 0.3s;
+    }
+
+    /* --- 重點：手機版樣式 (螢幕小於 768px) --- */
+    @media (max-width: 768px) {
+        .grid-section {
+            /* 強制設定為 2 欄 */
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 12px; /* 縮小間距，節省空間 */
+            padding: 10px;
+        }
+
+        .card {
+            padding: 15px 10px; /* 縮小內距，讓文字有寬度 */
+        }
+
+        .card h3 {
+            font-size: 0.95rem; /* 稍微縮小標題防止折行太嚴重 */
+        }
+
+        .card p {
+            font-size: 0.8rem; /* 縮小描述文字 */
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* 限制描述最多顯示兩行，避免卡片過長 */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .btn {
+            width: 90%; /* 按鈕變寬一點比較好點擊 */
+            padding: 6px 0;
+        }
+    }
+</style>
+
+<section class="grid-section" id="community">
+    <div class="card">
+        <i class="fa-brands fa-instagram"></i>
+        <h3>出國ESIM卡</h3>
+        <p>出國必備推薦</p>
+        <a href="https://esimconnect.com.tw/?fbclid=PAZnRzaAQ8j_1leHRuA2FlbQIxMAABp5sA-b5ni8MNREOEZWK-seterQmSJ-6fX3FBJsgaF-_s6NkJH5kmWKxpRWVR_aem_lydtzWOMepOh2pb2sy_Mxw#/access/esimbuy?referencecode=yue" class="btn" target="_blank">出國點我</a>
+    </div>
+
+    <div class="card">
+        <i class="fa-brands fa-instagram"></i>
+        <h3>個人 Instagram</h3>
+        <p>追蹤玥玥的最新作品、穿搭與日常分享。</p>
+        <a href="https://www.instagram.com/0w04linyue?igsh=MWJuMmdsbHpycWtmeQ%3D%3D&utm_source=qr" class="btn" target="_blank">追蹤玥玥</a>
+    </div>
+
+    <div class="card">
+        <i class="fa-solid fa-martini-glass-citrus"></i>
+        <h3>酒吧 Instagram</h3>
+        <p>Happy Cat Bar 掌握最新菜單與活動。</p>
+        <a href="https://www.instagram.com/happy.cat_bar?igsh=MWVoZ2JnMXdzZDY3bQ==" class="btn" target="_blank">查看酒吧</a>
+    </div>
+
+    <div class="card">
+        <i class="fa-brands fa-instagram"></i>
+        <h3>蝦皮賣場</h3>
+        <p>全台最大庫洛魔法使商品販售。</p>
+        <a href="https://s.shopee.tw/7KskIFajoh" class="btn" target="_blank">商品購買</a>
+    </div>
+
+    <div class="card">
+        <i class="fa-solid fa-wand-sparkles"></i>
+        <h3>魔卡少女櫻社團</h3>
+        <p>全台最大庫洛魔法使同好交流社群。</p>
+        <a href="https://www.facebook.com/share/g/18Cbas9Wfc/" class="btn" target="_blank">進入社團</a>
+    </div>
+</section>
 
     <section class="bar-footer" id="bar">
         <div class="bar-text">
